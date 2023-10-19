@@ -54,7 +54,8 @@ ol {
   justify-content: center;
   align-items: flex-end;
   gap: 30px;
-  max-width: 1140px;
+  width: 1140px;
+  margin: auto;
 }
 
 .search-form {
@@ -62,13 +63,13 @@ ol {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 40px;
 }
 
 .content__list {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 30px;
   height: 298px;
   overflow-y: auto;
 }
@@ -94,8 +95,8 @@ ol {
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
-  object-fit: cover;
-  object-position: center
+  object-position: center;
+  background-size: cover;
 }
 
 .content__video-card-description-container {
@@ -106,19 +107,16 @@ ol {
   text-overflow: ellipsis;
 }
 
-.content__video-card-description-container:hover {
-  text-decoration: underline;
-}
-
 .result {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: 711px;
 }
 
 .result__video-container {
   position: relative;
-  width: 711px;
+  width: 100%;
   height: 386px;
 }
 
@@ -153,7 +151,6 @@ ol {
 
 .content__card-link {
   display: block;
-  margin: 2px;
   color: #fff;
   text-decoration: none;
 }
@@ -171,12 +168,14 @@ ol {
 }
 
 .content__video-card-title {
+  width: 200px;
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 30px;
   font-style: normal;
   line-height: 100%;
   text-transform: uppercase;
+  text-overflow: ellipsis;
 }
 
 .content__video-card-description {
@@ -193,10 +192,15 @@ ol {
   display: flex;
   place-items: center;
   width: fit-content;
+  cursor: pointer;
 }
 
-.search-form__label:hover {
+.search-form__label:hover > .search-form__label-text {
   text-decoration: underline;
+}
+
+.search-form__label:focus > .search-form__label-text {
+  text-decoration: none;
 }
 
 .search-form__label-text {
@@ -204,13 +208,13 @@ ol {
 }
 
 .search-form__pseudo-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 19px;
   height: 19px;
   border: 1px solid #fff;
   cursor: pointer;
-  display: flex;
-justify-content: center;
-align-items: center;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
@@ -250,6 +254,7 @@ align-items: center;
 
 .button:focus {
   outline: none;
+  text-decoration: none;
 }
 
 .button:focus-visible {
@@ -271,7 +276,16 @@ align-items: center;
 
 .content__list-item {
   width: 394px;
+  margin: 2px 2px 32px;
   cursor: pointer;
+}
+
+.content__list-item:last-of-type {
+  margin-bottom: 0;
+}
+
+.content__list-item:hover {
+  text-decoration: underline;
 }
 
 .search-form__textfield {
