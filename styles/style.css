@@ -37,6 +37,10 @@ ol {
   white-space: nowrap;
 }
 
+:focus {
+  outline: none;
+}
+
 .page {
   display: flex;
   place-items: center;
@@ -82,7 +86,7 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 26px;
-  width: 100%;
+  width: 399px;
   height: 100%;
 }
 
@@ -303,10 +307,6 @@ ol {
   line-height: normal;
   background-color: inherit;
   appearance: none;
-}
-
-:focus {
-  outline: none;
 }
 
 .search-form__label:has(:focus-visible) {
