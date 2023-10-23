@@ -74,8 +74,8 @@ ol {
   display: flex;
   flex-direction: column;
   height: 298px;
-  overflow-y: auto;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .content__list::-webkit-scrollbar {
@@ -89,10 +89,10 @@ ol {
 
 .content__video-card {
   display: flex;
-  align-items: flex-start;
   justify-content: space-between;
-  padding: 2px;
+  align-items: flex-start;
   width: 100%;
+  padding: 2px;
 }
 
 .content__video-card-thumbnail {
@@ -154,9 +154,9 @@ ol {
 
 .content__card-link {
   display: block;
+  width: 100%;
   color: #fff;
   text-decoration: none;
-  width: 100%;
 }
 
 .content__card-link:focus-visible {
@@ -209,6 +209,14 @@ ol {
 }
 
 .search-form__label:focus > .search-form__label-text {
+  text-decoration: none;
+}
+
+.search-form__label:active > .search-form__label-text {
+  text-decoration: none;
+}
+
+.search-form__label:checked > .search-form__label-text {
   text-decoration: none;
 }
 
